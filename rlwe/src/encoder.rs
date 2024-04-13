@@ -55,7 +55,7 @@ impl CKKSEncoder {
         let num_coeffs = coeffs.len();
         let mut result = bit_reverse_vec(coeffs);
 
-        let log_num_coeffs = num_coeffs.log2();
+        let log_num_coeffs = num_coeffs.ilog2();
 
         for logm in 1..log_num_coeffs + 1 {
             let idx_mod = 1 << (logm + 2);
@@ -86,7 +86,7 @@ impl CKKSEncoder {
         let num_coeffs = coeffs.len();
         let mut result = coeffs.clone();
 
-        let log_num_coeffs = num_coeffs.log2();
+        let log_num_coeffs = num_coeffs.ilog2();
 
         for logm in (1..log_num_coeffs + 1).rev() {
             let idx_mod = 1 << (logm + 2);

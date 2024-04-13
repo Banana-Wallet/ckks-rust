@@ -52,7 +52,7 @@ impl Ntt {
         let num_coeffs = coeffs.len();
         let mut result = bit_reverse_vec(coeffs);
 
-        let log_num_coeffs = num_coeffs.log2();
+        let log_num_coeffs = num_coeffs.ilog2();
 
         for logm in 1..log_num_coeffs + 1 {
             for j in (0..num_coeffs).step_by(1 << logm) {

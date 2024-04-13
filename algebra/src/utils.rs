@@ -38,7 +38,7 @@ pub fn bit_reverse_vec<T: Clone>(values: &Vec<T>) -> Vec<T> {
     let mut result = (*values).clone();
     let len = result.len();
     for i in 0..len / 2 {
-        result.swap(i, reverse_bits(i, len.log2()));
+        result.swap(i, reverse_bits(i, len.ilog2()));
     }
     result
 }
