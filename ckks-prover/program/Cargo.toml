@@ -9,6 +9,7 @@ sp1-zkvm = { git = "https://github.com/succinctlabs/sp1.git" }
 polyr = { path = "../../polyr/" }
 algebra = { path = "../../algebra" }
 rlwe = { path = "../../rlwe" }
+tfhe-test = { path = "../../tfhe-test" }
 arrayvec = "0.7.1"
 approx = "0.5.0"
 num-bigint = "0.4.2"

@@ -3,7 +3,7 @@ members = [
     "polyr",
     "rlwe",
     "algebra",
-    "playground",
+    "playground", "tfhe-test",
 ]
 
 [profile.bench]
